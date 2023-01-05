@@ -6,11 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
+    <style>
+        button {
+            background-color: #679289;
+            border: none;
+            color: white;
+            width: 200px;
+            height: 40px;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .buttons {
+            width: 60%;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        h1, h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .results {
+            display: flex;
+            width: 60%;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+
+        .results img {
+            width: 150px;
+        }
+    </style>
 </head>
-<body>
-    <!-- 3 rounds -->
+<body bgcolor="#1D7874">
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="buttons">
     <button value="rock" onclick="startGame('rock')">Rock</button>
     <button value="paper" onclick="startGame('paper')">Paper</button>
     <button value="scissors" onclick="startGame('scissors')">Scissors</button>
+</div>
+<div class="results">
+    <div>
+        <h2>Your choice:</h2>
+        <img id="playerchoice">
+    </div>
+    <div>
+        <h2>Computer's choice:</h2>
+        <img id="computerchoice">
+    </div>
+</div>
+<h2 id="result"></h2>
 </body>
 </html>
