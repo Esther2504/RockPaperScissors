@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, paper, scissors</title>
     <script src="script.js"></script>
     <style>
-        button {
-            background-color: #679289;
-            border: none;
-            color: white;
-            width: 200px;
-            height: 40px;
-            font-size: 1.3rem;
-            cursor: pointer;
-        }
+      @font-face {
+        font-family: "Gayathri", sans-serif;
+        src: url("https://fonts.googleapis.com/css2?family=Gayathri&display=swap");
+      }
 
-        .buttons {
-            width: 60%;
-            margin: 100px auto;
-            display: flex;
-            justify-content: space-around;
-        }
+      body {
+        font-family: "Gayathri", sans-serif;
+        background-color: #1d7874;
+      }
 
-        h1, h2 {
-            color: white;
-            text-align: center;
-        }
+      button {
+        background-color: #679289;
+        border: none;
+        font-family: "Gayathri", sans-serif;
+        color: white;
+        width: 200px;
+        height: 40px;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
 
-        .results {
-            display: flex;
-            width: 60%;
-            justify-content: space-around;
-            margin: 0 auto;
-        }
+      .buttons {
+        width: 60%;
+        margin: 80px auto;
+        display: flex;
+        justify-content: space-around;
+      }
 
-        .results img {
-            width: 150px;
-        }
+      h1,
+      h2 {
+        color: white;
+        text-align: center;
+        cursor: default;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 70px;
+      }
+
+      .results-container {
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        margin: 0 auto;
+      }
+
+      .results-container img {
+        width: 150px;
+      }
+
+      .results-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #computerchoice {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
     </style>
-</head>
-<body bgcolor="#1D7874">
+  </head>
+  <body>
     <h1>Rock, Paper, Scissors</h1>
     <div class="buttons">
-    <button value="rock" onclick="startGame('rock')">Rock</button>
-    <button value="paper" onclick="startGame('paper')">Paper</button>
-    <button value="scissors" onclick="startGame('scissors')">Scissors</button>
-</div>
-<div class="results">
-    <div>
+      <button value="rock" onclick="startGame('rock')">Rock</button>
+      <button value="paper" onclick="startGame('paper')">Paper</button>
+      <button value="scissors" onclick="startGame('scissors')">Scissors</button>
+    </div>
+    <div class="results-container">
+      <div>
         <h2>Your choice:</h2>
-        <img id="playerchoice">
-    </div>
-    <div>
+        <img id="playerchoice" />
+      </div>
+      <div>
         <h2>Computer's choice:</h2>
-        <img id="computerchoice">
+        <img id="computerchoice" />
+      </div>
     </div>
-</div>
-<h2 id="result"></h2>
-</body>
+    <h2 id="result"></h2>
+  </body>
 </html>
